@@ -1,0 +1,25 @@
+spring:
+  server:
+    port: 8080
+  datasource:
+    url: jdbc:mysql://localhost:3306/hb-05-many-to-many?autoReconnect=true
+    username: user
+    password: password
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # Turn off the spring boot banner
+  main:
+    banner-mode: off
+logging:
+  level:
+    root: warn
+    org:
+      hibernate:
+        sql: trace
+        orm:
+          jdbc:
+            bind: trace
