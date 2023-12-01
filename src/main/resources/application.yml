@@ -5,10 +5,15 @@ spring:
     url: jdbc:mysql://localhost:3306/hb-05-many-to-many?autoReconnect=true
     username: user
     password: password
+  h2:
+    console:
+      enabled: true
+#      http://localhost:8080/h2-console
   jpa:
     show-sql: true
     properties:
       hibernate:
+        generate_statistics: true
         format_sql: true
 
   # Turn off the spring boot banner
